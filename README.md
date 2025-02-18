@@ -21,6 +21,14 @@
 
 4. Install other required programs and packages using _dnf_.
 
+## Audio:
+
+1. Setting up virtual microphone and virtual speaker for usecases like using OBS Studio's output audio from microphone on other programms:
+
+- Create a virtual speaker on Pipewire inserting the following command on the terminal: `pactl load-module module-null-sink sink_name="VirtualSpeaker" sink_properties=device.description=VirtualSpeaker`
+- Create a virtual microphone on Pipewire inserting the following command on the terminal: `pactl load-module module-null-sink media.class=Audio/Source/Virtual sink_name="VirtualMic" channel_map=front-left,front-right`
+- Link them together (like a virtual cable) with the following commands: `pw-link VirtualSpeaker:monitor_FL VirtualMic:input_FL`, then `pw-link VirtualSpeaker:monitor_FR VirtualMic:input_FR`
+
 ## Terminal Customization:
 
 1. Download a [Nerd Font](https://www.nerdfonts.com/font-downloads) and, once downloaded, head up to it's folder and unzip the file: `unzip Font.zip`. Then you can remove the zip: `rm Font.zip`. And finally, move it's content to the shared fonts folder: `mv * ~/.local/share/fonts/`.
