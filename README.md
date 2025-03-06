@@ -21,6 +21,13 @@
 
 4. Install other required programs and packages using _dnf_.
 
+## Video (NVIDIA):
+
+- Open Software center, then click on Main Menu to expand it. Click on Software Repositories.
+- Look for the section: Fedora Third Party Repositories. Turn on: Enable New Repositories.
+- Close the Software Repositories window, search for and install (on Software center): NVIDIA Linux Graphics Driver.
+- Once installed, restart the PC.
+
 ## Audio:
 
 1. Setting up virtual microphone and virtual speaker for usecases like using OBS Studio's output audio from microphone on other programms:
